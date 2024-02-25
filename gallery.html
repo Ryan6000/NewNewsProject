@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webber News - Gallery</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href ="index.html">Home</a></li>
+                <li><a href ="article.html">Article</a></li>
+                <li><a href ="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="photo-gallery">
+        <div class="photo"><img src="images/kittens.jpg" alt="kittens"></div>
+        <div class="photo"><img src="images/puppies.jpg" alt="puppies"></div>
+        <div class="photo"><img src="images/fish.jpg" alt="fish"></div>        
+
+        <div class="gallery-controls">
+            <button id="prev">Previous</button>
+            <button id="next">Next</button>
+        </div>
+        
+    </main>
+
+    <script>
+        let currentImageIndex = 0;
+        const images = document.querySelectorAll('.photo-gallery .photo');
+        const totalImages = images.length;
+    
+        function showImage(index) {
+            images.forEach((img, i) => {
+                img.style.display = i === index ? 'block' : 'none';
+            });
+        }
+    
+        document.getElementById('prev').addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex - 1 + totalImages) % totalImages;
+            showImage(currentImageIndex);
+        });
+    
+        document.getElementById('next').addEventListener('click', () => {
+            currentImageIndex = (currentImageIndex + 1) % totalImages;
+            showImage(currentImageIndex);
+        });
+    
+        // Initialize the first image display
+        showImage(currentImageIndex);
+    </script>
+    
+ 
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>

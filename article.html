@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webber News - Articles</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+  <header class="article-header">
+       <h1>FlexBox Article!</h1>
+       <p>By Chat GPT | 2/9/2024</p>
+
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href ="index.html">Home</a></li>
+                <li><a href ="article.html">Article</a></li>
+                <li><a href ="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="content-container">
+
+   <main class="article-content">
+        <section>
+            <h2>Understanding CSS: The Language That Styles the Web</h2>
+            <h3>CSS</h3>
+            <p>Cascading Style Sheets (CSS) is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. It is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation improves content accessibility, provides more flexibility and control in the specification of presentation characteristics, and reduces complexity and repetition in the structural content. This article delves into the essence of CSS, its evolution, and its pivotal role in modern web development.</p>
+            <h3>The Genesis of CSS</h3>
+            <p>CSS was first proposed by Håkon Wium Lie on October 10, 1994. At the time, the web was growing rapidly, but there was a glaring issue: the lack of style controls could potentially lead to a chaotic web landscape. HTML was initially responsible for both structure and style, which made documents complex and difficult to maintain. CSS was developed to address this issue, allowing web designers and developers to create visually engaging and consistent websites by separating style from structure.</p>
+            <h3>How CSS Works</h3>
+            <p>At its core, CSS operates by selecting elements in the HTML document and applying styles to them. A CSS rule consists of a selector and a declaration block. The selector points to the HTML element you want to style, while the declaration block contains one or more declarations separated by semicolons. Each declaration includes a property and a value, specifying how the elements selected by the selector should be styled.</p>
+            <p>CSS can be applied to HTML documents in three ways: inline styles, internal stylesheets, and external stylesheets. Inline styles are used to apply unique styles directly to an HTML element. Internal stylesheets place CSS inside a style element in the HTML document's head, allowing styles to be applied to elements within that document. External stylesheets are the most efficient, especially for larger websites, as they separate the CSS into .css files, which are then linked to the HTML documents. This separation promotes reusability and maintainability. </p>
+            <h3>Evolution and Features</h3>
+            <p>Over the years, CSS has evolved significantly, with the current standard being CSS3. CSS3 introduced a myriad of new capabilities like animations, transitions, flexbox, grid layouts, and media queries, transforming the way developers approach responsive design. Flexbox and Grid, for instance, are powerful layout models that provide unparalleled control over element alignment, order, and positioning, enabling the creation of complex, responsive layouts with less code.</p>
+            <p>Media queries, another standout feature, allow styles to be conditionally applied based on a device's viewport size, resolution, or orientation. This has been instrumental in the rise of mobile-first design, ensuring that web applications are accessible and functional across a wide range of devices.</p>
+            <h3>The Impact of CSS</h3>
+            <p>CSS has had a profound impact on web design and development. It has not only made websites more aesthetically pleasing but also improved their usability and accessibility. By enabling the separation of content from design, it allows for faster page loads, easier maintenance, and the ability to present the same markup page in multiple styles for different rendering methods, like on-screen, in print, by voice (when read by a speech-based browser or screen reader), and on Braille-based tactile devices.</p>
+            <h3>The Future of CSS</h3>
+            <p>The future of CSS promises further advancements in design capabilities and developer tools. With the ongoing development of CSS modules and the evolution of web standards, CSS continues to play a vital role in shaping the future of web design. As browser support for CSS features becomes more consistent, and as tools and frameworks built around CSS continue to mature, the potential for creating innovative, accessible, and efficient web experiences is limitless.</p>
+            <p>In conclusion, CSS is an indispensable tool in the web developer's toolkit. Its ability to style and layout web pages has revolutionized the appearance and functionality of the web. As it continues to evolve, its role in creating responsive, accessible, and visually compelling websites will only grow stronger, solidifying its status as the language that styles the web.</p>
+        </section>
+    </main>
+
+    <aside class="sidebar">
+        <section class="advertisement">
+            <h3>Adopt Kittens!</h3>
+        <p>Find your perfect kitten companion today.</p>
+        <img src = "images/kittens.jpg">
+        </section>
+    </aside>
+
+</div>
+
+
+    <script>
+        document.querySelector('.hamburger').addEventListener('click', function() {
+            document.querySelector('nav ul').classList.toggle('active');
+        });
+    </script>
+    
+
+      
+</body>
+</html>
